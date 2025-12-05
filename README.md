@@ -143,5 +143,3 @@ After running with this configuration, `signed_form.pdf` will have your signatur
    * Ensure `SIGN_IMAGE` and `PDF_TEMPLATE` paths are correct relative to the script location.
 
 ---
-
-✅ This README provides all information needed to extract a signature from an image and automatically place it on a PDF form with transparency and scaling.
