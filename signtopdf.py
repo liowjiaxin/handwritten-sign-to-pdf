@@ -61,9 +61,13 @@ def insert_signature_to_pdf(pdf_template, signature_file, output_pdf, max_width,
 
     # Bottom-right placement with margin
     page_width, page_height = page.rect.width, page.rect.height
-    x0 = page_width - sig_w - margin
-    y0 = page_height - sig_h - margin
+    # x0 = page_width - sig_w - margin
+    # y0 = page_height - sig_h - margin
 
+    # NEW COORDINATES:
+    x0 = page_width - sig_w - margin  # Keep horizontal margin as is
+    y0 = page_height - sig_h - 10     # REDUCED vertical margin to move it dow
+    
     rect = fitz.Rect(x0, y0, x0 + sig_w, y0 + sig_h)
     page.insert_image(rect, filename=signature_file)
 
